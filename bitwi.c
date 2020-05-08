@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
- 
 char * showbits( unsigned int x, int size )
 {
 	char out[] = "";
@@ -15,14 +11,15 @@ char * showbits( unsigned int x, int size )
 	return output;
 }
 
-char * holger(int argc, char *argv[])
+char * holger(char str[], int size)
 {
+	//Det her er mærkeligt!!!
+	char lort[] = "cant delete me";
 	char out[] = "";
 	char num[] = "";
-	char str[] = "#-15";
 	int i;
-	int p = strlen(str);
 	char minus = '-';
+	int p = strlen(str);
 
 	if (str[1] == minus)
 	{
@@ -30,7 +27,7 @@ char * holger(int argc, char *argv[])
 			strncat(num, &str[i],1);
 		}
 		int number = atoi(num);
-		return showbits(-number,1);
+		return showbits(-number,size);
 	}
 	else
 	{
@@ -38,8 +35,8 @@ char * holger(int argc, char *argv[])
 			strncat(num, &str[i],1);
 		}
 		int number = atoi(num);
-		return showbits(number,1);
+		return showbits(number,size);
 	}
 	
-    return 0;
+    return "fejl";
 }
