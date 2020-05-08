@@ -2,57 +2,27 @@
 #include <string.h>
 #include <stdlib.h>
  
-char * binbin(int n)
+char * showbits( unsigned int x, int size )
 {
-	int a[10];
-	int i;    
-	char word[2];
-	char out[4] = "";
-
-	for(i=0;n>0;i++)    
-	{    
-		a[i]=n%2;    
-		n=n/2;    
-	}    
-
-
-	for(i=i-1;i>=0;i--)    
-	{    
-		sprintf(word, "%d", a[i]);
-		strcat(out, word);
-	}    
-	printf("%s\n",out);    
-	return out;  
+	char out[] = "";
+	unsigned char word[12] = "";
+    	for (int i = (sizeof(int) + size ) - 1; i >= 0; i--)
+    	{
+    		char bub = (x & (1u << i) ? '1' : '0');
+    	    	strncat(out,&bub,1);
+    	}
+	char *output = out;
+	return output;
 }
 
-char * nibnib(char *binbin)
-{
-	char out[4] = "";
-	int p = strlen(binbin);
-	int i;
-	for (i = 0; i < p; i++)
-	{
-		if(strcmp(binbin[i],"0")==0)
-		{
-		strcat(out,"1");
-		}
-		else if(strcmp(binbin[i],"1")==0)
-		{
-		strcat(out,"0");
-		}
-	}
-	return out;
-}
-
-int main(int argc, char *argv[])
+char * holger(int argc, char *argv[])
 {
 	char out[] = "";
 	char num[] = "";
-	char str[] = "#-12345678";
+	char str[] = "#-15";
 	int i;
 	int p = strlen(str);
 	char minus = '-';
-	printf("%s\n\n",num);
 
 	if (str[1] == minus)
 	{
@@ -60,15 +30,15 @@ int main(int argc, char *argv[])
 			strncat(num, &str[i],1);
 		}
 		int number = atoi(num);
-		printf("%d\n",number);
+		return showbits(-number,1);
 	}
 	else
 	{
-		printf("2");
-		//for (i = 1; i < p; i++){
-		//	printf("%c\n",str[i]);
-		//	strcat(out,"8");
-		//}
+		for (i = 2; i < p; i++){
+			strncat(num, &str[i],1);
+		}
+		int number = atoi(num);
+		return showbits(number,1);
 	}
 	
     return 0;
