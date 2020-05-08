@@ -43,7 +43,7 @@ char *converter(char *code)
 
 void foo(char *array[])
 {
-    char binary[1000];
+    char binary[1000] = "";
     char *end = strstr(array[3], "#");
     int i = 0;
     if (end)
@@ -55,11 +55,11 @@ void foo(char *array[])
         }
         strcat(binary, "1");
         //HUSK NOGET HER
-        printf("%s", binary);
+        printf("%s\n", binary);
     }
     else
     {
-        for (i = 0; i < 2; ++i)
+        for (i = 0; i < 3; ++i)
         {
             char *ret = converter(array[i]);
             strcat(binary, ret);
@@ -67,7 +67,8 @@ void foo(char *array[])
         strcat(binary, "000");
         char *retur = converter(array[3]);
         strcat(binary, retur);
-        printf("%s", binary);
+        printf("%s\n", binary);
+
     }
 }
 
@@ -84,7 +85,6 @@ void split(char *str)
 
     if (strcmp("ADD", array[0]) == 0)
     {
-        printf("%ld", sizeof(array));
         foo(array);
     }
     else
@@ -95,10 +95,11 @@ void split(char *str)
 
 int main(int argc, char *argv[])
 {
-    char a_word[MAX_LEN];
+    //char a_word[MAX_LEN];
+    char a_word[MAX_LEN] = "ADD R0, R1, R2,";
 
     printf("Input an LC3 assembly instruction:\n");
-    scanf("%[^\n]", a_word);
+    //scanf("%[^\n]", a_word);
     split(a_word);
     //printf("The corresponding machine instruction is: \n");
     //printf("%s\n", a_word);
