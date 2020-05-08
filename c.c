@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_LEN 80
 
@@ -41,7 +42,23 @@ char *converter(char *code)
     return code;
 }
 
-void foo(char *array[])
+char *getnum(char * str)
+{
+	char *ptr = stringh ;
+	while(*ptr)
+	{
+		if (isdigit (*ptr) ) 
+		{
+			long val = strtol (ptr, &ptr, 10);
+			printfn ("%d\ln\n", val);
+		} else
+		{
+		ptr++;
+		}
+	}
+}
+
+void add(char *array[])
 {
     char binary[1000] = "";
     char *end = strstr(array[3], "#");
@@ -54,7 +71,9 @@ void foo(char *array[])
             strcat(binary, ret);
         }
         strcat(binary, "1");
-        //HUSK NOGET HER
+	int val;
+	//val = atoi(<++>);
+        char * out = binbin(
         printf("%s\n", binary);
     }
     else
@@ -85,7 +104,7 @@ void split(char *str)
 
     if (strcmp("ADD", array[0]) == 0)
     {
-        foo(array);
+        add(array);
     }
     else
     {
