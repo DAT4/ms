@@ -4,14 +4,17 @@
 #include "conv.c"
 #include "bitwi.c"
 #include "add.c"
+#include "br.c"
+#include "ld.c"
+#include "st.c"
+#include "ldr.c"
 #include "not.c"
 #include "split.c"
 
-
-//hej
+//
 int main()
 {
-    	char a_word[40] = "ADD R6, R7, R2,";
-        char *res = split(a_word);
-	return 0;
+    char a_word[40] = "ST R2, #-7";
+    char *res = split(a_word);
+    return 0;
 }

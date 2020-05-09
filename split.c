@@ -19,6 +19,26 @@ char *split(char str[])
     		char *res = not(array);
             return res;
     	}
+        else if (strcmp("BRz", array[0]) == 0)
+    	{
+    		char *res = br(array);
+            return res;
+    	}
+        else if (strcmp("ST", array[0]) == 0)
+    	{
+    		char *res = st(array);
+            return res;
+    	}
+        else if (strcmp("LD", array[0]) == 0)
+    	{
+    		char *res = ld(array);
+            return res;
+    	}
+        else if (strcmp("LDR", array[0]) == 0)
+    	{
+    		char *res = ldr(array);
+            return res;
+    	}
     	else
     	{
     		printf("fejl");

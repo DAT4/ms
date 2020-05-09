@@ -3,12 +3,10 @@
 #include <stdlib.h>
 #include "split.c"
 
-#define MAX_LEN 80
 
 int main(int argc, char *argv[])
 {
-    //char a_word[MAX_LEN];
-    char a_word[MAX_LEN] = "ADD R0, R1, #-15";
+    char a_word[40] = "ADD R0, R1, #-15";
 
     printf("Input an LC3 assembly instruction:\n");
     //scanf("%[^\n]", a_word);

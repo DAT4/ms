@@ -8,6 +8,10 @@ char *converter(char *code)
     {
         return "1001";
     }
+    else if (strcmp(code, "ST") == 0)
+    {
+        return "0011";
+    }
     else if (strcmp(code, "BR") == 0)
     {
         return "0000";
@@ -43,6 +47,10 @@ char *converter(char *code)
     else if (strcmp(code, "LD") == 0)
     {
         return "0010";
+    }
+    else if (strcmp(code, "LDR") == 0)
+    {
+        return "0110";
     }
     else if (strcmp(code, "R0,") == 0)
     {
