@@ -4,6 +4,10 @@ char *converter(char *code)
     {
         return "0001";
     }
+    else if (strcmp(code, "NOT") == 0)
+    {
+        return "1001";
+    }
     else if (strcmp(code, "LD") == 0)
     {
         return "0010";
@@ -27,6 +31,18 @@ char *converter(char *code)
     else if (strcmp(code, "R4,") == 0)
     {
         return "100";
+    }
+    else if (strcmp(code, "R5,") == 0)
+    {
+        return "101";
+    }
+    else if (strcmp(code, "R6,") == 0)
+    {
+        return "110";
+    }
+    else if (strcmp(code, "R7,") == 0)
+    {
+        return "111";
     }
     else
     {

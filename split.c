@@ -1,12 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "add.c"
-
-void split(char *str)
+char *split(char str[])
 {
     	char *p = strtok(str, " ");
-    	char *array[3];
+    	char *array[40];
     	int i = 0;
     	while (p != NULL)
     	{
@@ -16,18 +11,16 @@ void split(char *str)
 
     	if (strcmp("ADD", array[0]) == 0)
     	{
-    		printf("inside ADD");
-    		//add(array);
+    		char *res = add(array);
+            return res;
+    	}
+        else if (strcmp("NOT", array[0]) == 0)
+    	{
+    		char *res = not(array);
+            return res;
     	}
     	else
     	{
     		printf("fejl");
     	}
-}
-
-int main()
-{
-    	char *a_word = "ADD R0, R1, #-15";
-    	split(a_word);
-	return 0;
 }

@@ -1,5 +1,3 @@
-#include "bitwi.c"
-#include "conv.c"
 char *add(char *array[])
 {
     	char binary[1000] = "";
@@ -17,8 +15,7 @@ char *add(char *array[])
     		strcat(binary, "-");
     		char *res = holger(array[3],1);
     		strcat(binary, res);
-		char *out = binary;
-		return out;
+            puts(binary);
     	}
     	else
     	{
@@ -30,6 +27,6 @@ char *add(char *array[])
     		strcat(binary, "000");
     		char *retur = converter(array[3]);
     		strcat(binary, retur);
-    		printf("%s\n", binary);
+    		puts(binary);
     	}
 }
