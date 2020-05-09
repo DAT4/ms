@@ -8,6 +8,38 @@ char *converter(char *code)
     {
         return "1001";
     }
+    else if (strcmp(code, "BR") == 0)
+    {
+        return "0000";
+    }
+    else if (strcmp(code, "BRnzp") == 0)
+    {
+        return "0000111";
+    }
+    else if (strcmp(code, "BRnz") == 0)
+    {
+        return "0000110";
+    }
+    else if (strcmp(code, "BRn") == 0)
+    {
+        return "0000100";
+    }
+    else if (strcmp(code, "BRzp") == 0)
+    {
+        return "0000011";
+    }
+    else if (strcmp(code, "BRp") == 0)
+    {
+        return "0000001";
+    }
+    else if (strcmp(code, "BRnp") == 0)
+    {
+        return "0000101";
+    }
+    else if (strcmp(code, "BRz") == 0)
+    {
+        return "0000010";
+    }
     else if (strcmp(code, "LD") == 0)
     {
         return "0010";
