@@ -1,1 +1,1 @@
-.BLKW 20 x3a70 
+.STRINGZ Hello 

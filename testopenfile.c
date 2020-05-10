@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
+#include "hexchar.c"
 #include "conv.c"
 #include "write.c"
 #include "hex.c"
+#include "stringz.c"
 #include "blkw.c"
 #include "bitwi.c"
 #include "add.c"

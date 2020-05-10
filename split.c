@@ -51,7 +51,7 @@ char *split(char str[])
     	}
         else if (strcmp(".STRINGZ", array[0]) == 0)
     	{
-    		char *res = hex(array[1]);
+    		char *res = stringz(array[1]);
             return res;
     	}
         else if (strcmp(".BLKW", array[0]) == 0)
