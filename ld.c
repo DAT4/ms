@@ -10,5 +10,6 @@ char *ld(char *array[])
         ret = holger(array[2],5);
     	strcat(binary, ret);
         puts(binary);
+        appender(binary);
 		return "ok";
 }

@@ -9,13 +9,12 @@ char *add(char *array[])
     		{
     			char *ret = converter(array[i]);
     			strcat(binary, ret);
-    			strcat(binary, "-");
     		}
     		strcat(binary, "1");
-    		strcat(binary, "-");
     		char *res = holger(array[3],1);
     		strcat(binary, res);
             puts(binary);
+            appender(binary);
     	}
     	else
     	{
@@ -28,5 +27,6 @@ char *add(char *array[])
     		char *retur = converter(array[3]);
     		strcat(binary, retur);
     		puts(binary);
+            appender(binary);
     	}
 }

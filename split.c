@@ -39,6 +39,31 @@ char *split(char str[])
     		char *res = ldr(array);
             return res;
     	}
+        else if (strcmp(".ORIG", array[0]) == 0)
+    	{
+    		char *res = hex(array[1]);
+            return res;
+    	}
+        else if (strcmp(".FILL", array[0]) == 0)
+    	{
+    		char *res = hex(array[1]);
+            return res;
+    	}
+        else if (strcmp(".STRINGZ", array[0]) == 0)
+    	{
+    		char *res = hex(array[1]);
+            return res;
+    	}
+        else if (strcmp(".BLKW", array[0]) == 0)
+    	{
+    		char *res = blkw(array);
+            return res;
+    	}
+        else if (strcmp(".END", array[0]) == 0)
+    	{
+    		char *res = hex(array[1]);
+            return res;
+    	}
     	else
     	{
     		printf("fejl");
