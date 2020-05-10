@@ -61,8 +61,8 @@ char *split(char str[])
     	}
         else if (strcmp(".END", array[0]) == 0)
     	{
-    		char *res = hex(array[1]);
-            return res;
+    		appender("");
+            return "ok";
     	}
     	else
     	{

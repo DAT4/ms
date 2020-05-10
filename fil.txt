@@ -1,1 +1,2 @@
-.STRINGZ Hello 
+.FILL x3000 
+.END 
