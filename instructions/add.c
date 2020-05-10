@@ -1,6 +1,7 @@
 char *add(char *array[])
 {
-    	char binary[1000] = "";
+    	char *binary = "";
+        binary = (char *) malloc(100);
     	char *end = strstr(array[3], "#");
     	int i = 0;
     	if (end)
@@ -13,8 +14,7 @@ char *add(char *array[])
     		strcat(binary, "1");
     		char *res = holger(array[3],1);
     		strcat(binary, res);
-            puts(binary);
-            appender(binary);
+            return binary;
     	}
     	else
     	{
@@ -26,7 +26,6 @@ char *add(char *array[])
     		strcat(binary, "000");
     		char *retur = converter(array[3]);
     		strcat(binary, retur);
-    		puts(binary);
-            appender(binary);
+            return binary;
     	}
 }

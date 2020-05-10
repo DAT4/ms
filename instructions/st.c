@@ -1,6 +1,7 @@
-char *ld(char *array[])
+char *st(char *array[])
 {
-        char binary[1000] = "";
+    	char *binary = "";
+        binary = (char *) malloc(100);
     	int i = 0;
     	char *ret = "";
         ret = converter(array[0]);
@@ -9,7 +10,5 @@ char *ld(char *array[])
     	strcat(binary, ret);
         ret = holger(array[2],5);
     	strcat(binary, ret);
-        puts(binary);
-        appender(binary);
-		return "ok";
+		return binary;
 }

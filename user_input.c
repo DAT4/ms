@@ -19,33 +19,12 @@
 #include "utils/split.c"
 #include "utils/labelfinder.c"
 
-#define MAX 1000
-
-//
-int main(int argc, char *argv[])
+int main(void)
 {
-    char *obj = argv[1];
-    FILE *f;
-    char str[MAX];
-    char **out;
-    clear();
-
-    if (argc < 2)
-    {
-        puts("\nremember to put a file!!!!\n\n");
-        return 1;
-    } 
-
-    f = fopen(obj, "r");
-    while (fgets(str, MAX, f))
-    {
-        char *res = labelfinder(str);
-    }
-
-    f = fopen(obj, "r");
-    while (fgets(str, MAX, f))
-    {
-        char *res = split(str);
-    }
+    char str[40];
+    printf("Input an LC3 assembly instruction:\n");
+    scanf("%[^\n]", str);
+    printf("The corresponding machine instruction is: \n");
+    char *res = split(str);
     return 0;
 }

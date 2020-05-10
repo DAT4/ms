@@ -1,6 +1,7 @@
 char *ldr(char *array[])
 {
-    	char binary[1000] = "";
+    	char *binary = "";
+        binary = (char *) malloc(100);
     	int i = 0;
     	for (i = 0; i < 3; ++i)
     	{
@@ -9,5 +10,5 @@ char *ldr(char *array[])
     	}
     	char *res = holger(array[3],2);
     	strcat(binary, res);
-        puts(binary);
+        return binary;
 }

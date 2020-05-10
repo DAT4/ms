@@ -1,14 +1,5 @@
-char *split(char str[])
+char *router(char *array[])
 {
-    	char *p = strtok(str, " ");
-    	char *array[40];
-    	int i = 0;
-    	while (p != NULL)
-    	{
-    		array[i++] = p;
-    		p = strtok(NULL, " ");
-    	}
-
     	if (strcmp("ADD", array[0]) == 0)
     	{
     		char *res = add(array);
@@ -66,6 +57,7 @@ char *split(char str[])
     	}
     	else
     	{
-    		printf("fejl");
+            return "ok";
     	}
+
 }

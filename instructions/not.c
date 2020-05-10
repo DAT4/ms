@@ -1,6 +1,7 @@
 char *not(char *array[])
 {
-        char binary[1000] = "";
+    	char *binary = "";
+        binary = (char *) malloc(100);
     	int i = 0;
     	for (i = 0; i < 3; ++i)
     	{
@@ -8,6 +9,5 @@ char *not(char *array[])
     		strcat(binary, ret);
     	}
     	strcat(binary, "111111");
-        puts(binary);
-		return "ok";
+		return binary;
 }
