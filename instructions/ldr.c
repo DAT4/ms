@@ -1,9 +1,9 @@
 /* Function for handling the instruction with LDR as opcode */
 char *ldr(char *array[], int line)
 {
-    char *ret;
+    char * ret;
     char *binary = "";
-    binary = (char *)malloc(100);
+    binary = (char *) malloc(100);
     int i = 0;
     /* First the program converts the opcode aswell as 
     the destination registry and base registry into binary code.
@@ -13,14 +13,14 @@ char *ldr(char *array[], int line)
         ret = converter(array[i]);
         strcat(binary, ret);
     }
+
     /* Then the program checks to see if there is a label match */
     char *label = lbl2addr(array[3]);
-    puts(label);
-    if (strcmp(label, "null") == 0)
+    if (strcmp(label, "null")==0)
     {
         /* If not convert the value into binary */
-        ret = holger(array[3], 2);
-        strcat(binary, ret);
+    	ret = holger(array[3],2);
+    	strcat(binary, ret);
         return binary;
     }
     else
@@ -35,9 +35,9 @@ char *ldr(char *array[], int line)
         int diff = addr - line;
         char *put;
         sprintf(put, "#%d", diff);
-        ret = holger(put, 2);
+        ret = holger(put,2);
         strcat(binary, ret);
-        return binary;
+	    return binary;
     }
     return "ok";
 }

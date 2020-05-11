@@ -2,7 +2,7 @@
 char *ld(char *array[], int line)
 {
     char *binary = "";
-    binary = (char *)malloc(100);
+    binary = (char *) malloc(100);
     int i = 0;
     char *ret = "";
     /* First the program converts the opcode LD to machine code */
@@ -13,13 +13,12 @@ char *ld(char *array[], int line)
     strcat(binary, ret);
     /* Then the program checks whether the value to be loaded is a label, or a value */
     char *label = lbl2addr(array[2]);
-    puts(label);
-    if (strcmp(label, "null") == 0)
+    if (strcmp(label, "null")==0)
     {
         /* If its a value convert it into binary */
-        ret = holger(array[2], 5);
+        ret = holger(array[2],5);
         strcat(binary, ret);
-        return binary;
+	    return binary;
     }
     else
     {
@@ -33,9 +32,9 @@ char *ld(char *array[], int line)
         int diff = addr - line;
         char *put;
         sprintf(put, "#%d", diff);
-        ret = holger(put, 5);
+        ret = holger(put,5);
         strcat(binary, ret);
-        return binary;
+	    return binary;
     }
     return "ok";
 }

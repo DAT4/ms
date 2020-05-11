@@ -2,7 +2,7 @@
 char *st(char *array[], int line)
 {
     char *binary = "";
-    binary = (char *)malloc(100);
+    binary = (char *) malloc(100);
     int i = 0;
     char *ret = "";
     /* First the program converts the opcode and source registry into machine code */
@@ -11,16 +11,16 @@ char *st(char *array[], int line)
     ret = converter(array[1]);
     strcat(binary, ret);
 
-    char *label = lbl2addr(array[2]);
     /* Then the program check whether or not store 
 the value of the source registry into the location of a label
  */
-    if (strcmp(label, "null") == 0)
+    char *label = lbl2addr(array[2]);
+    if (strcmp(label, "null")==0)
     {
         /* If it is not a label, then the PCoffset is genereated by converting the value into binary and storing it */
-        ret = holger(array[2], 5);
-        strcat(binary, ret);
-        return binary;
+        ret = holger(array[2],5);
+    	strcat(binary, ret);
+		return binary;
     }
     else
     {
@@ -32,9 +32,9 @@ the value of the source registry into the location of a label
         int diff = addr - line;
         char *put;
         sprintf(put, "#%d", diff);
-        ret = holger(put, 5);
+        ret = holger(put,5);
         strcat(binary, ret);
-        return binary;
+	    return binary;
     }
     return "ok";
 }

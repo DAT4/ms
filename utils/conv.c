@@ -53,37 +53,41 @@ char *converter(char *code)
     {
         return "0110";
     }
-    else if (strncmp(code, "R0,", 2) == 0)
+    else if (strncmp(code, "R0,",2) == 0)
     {
         return "000";
     }
-    else if (strncmp(code, "R1,", 2) == 0)
+    else if (strncmp(code, "R1,",2) == 0)
     {
         return "001";
     }
-    else if (strncmp(code, "R2,", 2) == 0)
+    else if (strncmp(code, "R2,",2) == 0)
     {
         return "010";
     }
-    else if (strncmp(code, "R3,", 2) == 0)
+    else if (strncmp(code, "R3,",2) == 0)
     {
         return "011";
     }
-    else if (strncmp(code, "R4,", 2) == 0)
+    else if (strncmp(code, "R4,",2) == 0)
     {
         return "100";
     }
-    else if (strncmp(code, "R5,", 2) == 0)
+    else if (strncmp(code, "R5,",2) == 0)
     {
         return "101";
     }
-    else if (strncmp(code, "R6,", 2) == 0)
+    else if (strncmp(code, "R6,",2) == 0)
     {
         return "110";
     }
-    else if (strncmp(code, "R7,", 2) == 0)
+    else if (strncmp(code, "R7,",2) == 0)
     {
         return "111";
+    }
+    else
+    {
+        /* code */
     }
 
     return code;

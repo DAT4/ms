@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     {
         puts("\nremember to put a file!!!!\n\n");
         return 1;
-    }
+    } 
 
     /* open the file and read each line, then the function labelfinder is
     called on each line of the file, before the while loop an int counter is

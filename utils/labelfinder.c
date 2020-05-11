@@ -8,36 +8,35 @@ char *labelfinder(char str[], int line)
     int i = 0;
     while (p != NULL)
     {
-        array[i++] = p;
-        p = strtok(NULL, " ");
+    	array[i++] = p;
+    	p = strtok(NULL, " ");
     }
-
     /*Here we define all strings that the problem can handle, if receive a string input
     that is not listed in the functions string array, then that means that the program has found
     a label has been found and will be stored
      */
     char *functions[30] = {
-        "ADD",
-        "NOT",
-        "BR",
-        "BRn",
-        "BRz",
-        "BRp",
-        "BRnz",
-        "BRnp",
-        "BRzp",
-        "BRnzp",
-        "ST",
-        "LD",
-        "LDR",
-        ".ORIG",
-        ".FILL",
-        ".STRINGZ",
-        ".BLKW",
-        ".END",
+    "ADD",
+    "NOT",
+    "BR",
+    "BRn",
+    "BRz",
+    "BRp",
+    "BRnz",
+    "BRnp",
+    "BRzp",
+    "BRnzp",
+    "ST",
+    "LD",
+    "LDR",
+    ".ORIG",
+    ".FILL",
+    ".STRINGZ",
+    ".BLKW",
+    ".END",
     };
 
-    for (i = 0; i < 18; i++)
+    for (i = 0; i<18; i++)
     {
         if (strcmp(array[0], functions[i]) == 0)
         {
@@ -45,16 +44,15 @@ char *labelfinder(char str[], int line)
         }
     }
     int j;
-
     /* If the labelfinder has found a string that does not match one of
     approved instructions, it then creates a new array with the values following
     the label fx: "LOOP ADD R1, R2, #-6". 
     The new array would then contain {"ADD", "R1", "R2", "#-6"}
      */
     char *newray[10];
-    for (j = 0; j < 10; j++)
+    for (j=0;j<10;j++)
     {
-        newray[j] = array[j + 1];
+        newray[j] = array[j+1];
     }
     /*The label name is stored for reference in the symbol table */
     char *key = array[0];
@@ -64,9 +62,10 @@ char *labelfinder(char str[], int line)
     char x[10] = "0x";
     char hex[10];
     sprintf(hex, "%x", line);
-    strcat(x, hex);
+    strcat(x,hex);
     /*The table is written using the symbols function in write.c using key as "labelname", x as "memory" 
     and value as binary representation of whatever instruction followed the label */
     symbols(key, x, value);
     free(value);
 }
+
