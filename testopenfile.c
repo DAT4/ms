@@ -37,15 +37,19 @@ int main(int argc, char *argv[])
     } 
 
     f = fopen(obj, "r");
+    int i = 12288;
     while (fgets(str, MAX, f))
     {
-        char *res = labelfinder(str);
+        char *res = labelfinder(str, i);
+        i++;
     }
 
     f = fopen(obj, "r");
+    i = 12288;
     while (fgets(str, MAX, f))
     {
-        char *res = split(str);
+        char *res = split(str, i);
+        i++;
     }
     return 0;
 }

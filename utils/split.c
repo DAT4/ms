@@ -1,4 +1,4 @@
-char *split(char str[])
+char *split(char str[], int line)
 {
     	char *p = strtok(str, " ");
     	char *array[10];
@@ -20,3 +20,4 @@ char *split(char str[])
             free(res);
         }
 }
+

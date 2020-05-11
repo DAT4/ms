@@ -1,4 +1,4 @@
-char *labelfinder(char str[])
+char *labelfinder(char str[], int line)
 {
     char *p = strtok(str, " ");
     char *array[10];
@@ -38,7 +38,9 @@ char *labelfinder(char str[])
     }
     char *key = array[0];
     char *value = router(newray);
-    symbols(key,value);
+    char hex[10];
+    sprintf(hex, "%x", line);
+    symbols(key, hex, value);
     free(value);
 }
 
