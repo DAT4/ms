@@ -1,4 +1,20 @@
 @startuml
 start
-:start;
+:load <b>.asm</b> file;
+while (file) is (has line)
+    :split line at " ";
+    if (line[0] is Assembly command) then (yes)
+        :store label and locaton;
+    else (no)
+    endif
+endwhile
+:load <b>.asm</b> file again;
+while (file) is (has line)
+    :split line at " ";
+    if (line[0] is Assembly command) then (yes)
+        :run relevant translator function;
+    else (no)
+    endif
+endwhile
+:store <b>out.txt</b> binary file;
 @enduml

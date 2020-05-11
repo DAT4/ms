@@ -1,0 +1,9 @@
+@startuml
+start
+:memory allocate binary;
+:load array line and location;
+if (array[1] is label) then (yes)
+    :hej;
+endif
+end
+@enduml
