@@ -12,7 +12,7 @@ int appender(char *binary) {
 int symbols(char *key, char *addr, char *value) {
    FILE * f;
    f = fopen ("out/sym.txt", "a");
-   fprintf(f, "%s %s %s\n", key, addr, value);
+   fprintf(f, "%s %s %s", key, addr, value);
    fclose(f);
    return 0;
 }

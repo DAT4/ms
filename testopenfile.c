@@ -9,6 +9,7 @@
 #include "directives/stringz.c"
 #include "directives/blkw.c"
 #include "utils/bitwi.c"
+#include "utils/labelreader.c"
 #include "instructions/add.c"
 #include "instructions/br.c"
 #include "instructions/ld.c"
@@ -21,13 +22,12 @@
 
 #define MAX 1000
 
-//
+////
 int main(int argc, char *argv[])
 {
     char *obj = argv[1];
     FILE *f;
     char str[MAX];
-    char **out;
     clear();
 
     if (argc < 2)

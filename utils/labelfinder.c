@@ -8,10 +8,17 @@ char *labelfinder(char str[], int line)
     	array[i++] = p;
     	p = strtok(NULL, " ");
     }
-    char *functions[11] = {
+    char *functions[20] = {
     "ADD",
     "NOT",
+    "BR",
+    "BRn",
     "BRz",
+    "BRp",
+    "BRnz",
+    "BRnp",
+    "BRzp",
+    "BRnzp",
     "ST",
     "LD",
     "LDR",
@@ -37,10 +44,12 @@ char *labelfinder(char str[], int line)
         newray[j] = array[j+1];
     }
     char *key = array[0];
-    char *value = router(newray);
+    char *value = router(newray, line);
+    char x[10] = "0x";
     char hex[10];
     sprintf(hex, "%x", line);
-    symbols(key, hex, value);
+    strcat(x,hex);
+    symbols(key, x, value);
     free(value);
 }
 

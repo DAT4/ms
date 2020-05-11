@@ -8,7 +8,7 @@ char *split(char str[], int line)
     		array[i++] = p;
     		p = strtok(NULL, " ");
     	}
-        char *res = router(array);
+        char *res = router(array, line);
         if (strcmp(res, "ok") == 0)
         {
             puts("it was one of those lables");

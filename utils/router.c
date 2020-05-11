@@ -1,4 +1,4 @@
-char *router(char *array[])
+char *router(char *array[], int line)
 {
     	if (strcmp("ADD", array[0]) == 0)
     	{
@@ -10,24 +10,24 @@ char *router(char *array[])
     		char *res = not(array);
             return res;
     	}
-        else if (strcmp("BRz", array[0]) == 0)
+        else if (strncmp("BR", array[0],2) == 0)
     	{
-    		char *res = br(array);
+    		char *res = br(array, line);
             return res;
     	}
         else if (strcmp("ST", array[0]) == 0)
     	{
-    		char *res = st(array);
+    		char *res = st(array, line);
             return res;
     	}
         else if (strcmp("LD", array[0]) == 0)
     	{
-    		char *res = ld(array);
+    		char *res = ld(array, line);
             return res;
     	}
         else if (strcmp("LDR", array[0]) == 0)
     	{
-    		char *res = ldr(array);
+    		char *res = ldr(array, line);
             return res;
     	}
         else if (strcmp(".ORIG", array[0]) == 0)
@@ -57,6 +57,7 @@ char *router(char *array[])
     	}
     	else
     	{
-            return "ok";
+            char *res = labelreader(array[0]);
+            return res;
     	}
 }

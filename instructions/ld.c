@@ -1,4 +1,4 @@
-char *ld(char *array[])
+char *ld(char *array[], int line)
 {
     	char *binary = "";
         binary = (char *) malloc(100);
