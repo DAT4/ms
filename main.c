@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
+//#include <ctype.h>
 #include "utils/hexchar.c"
 #include "utils/conv.c"
 #include "utils/write.c"
