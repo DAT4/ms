@@ -13,6 +13,8 @@ char * showbits( unsigned int x, int size )
 
 char * holger(char str[], int size)
 {
+    puts(str);
+    puts("HUHUHU^^^^");
 	//Det her er mærkeligt!!!
 	char lort[] = "cant delete me";
 	char out[] = "";
@@ -31,7 +33,7 @@ char * holger(char str[], int size)
 	}
 	else
 	{
-		for (i = 2; i < p; i++){
+		for (i = 1; i < p; i++){
 			strncat(num, &str[i],1);
 		}
 		int number = atoi(num);

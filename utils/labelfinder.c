@@ -8,7 +8,7 @@ char *labelfinder(char str[], int line)
     	array[i++] = p;
     	p = strtok(NULL, " ");
     }
-    char *functions[20] = {
+    char *functions[30] = {
     "ADD",
     "NOT",
     "BR",
@@ -26,10 +26,10 @@ char *labelfinder(char str[], int line)
     ".FILL",
     ".STRINGZ",
     ".BLKW",
-    ".END"
+    ".END",
     };
 
-    for (i = 0; i<10; i++)
+    for (i = 0; i<18; i++)
     {
         if (strcmp(array[0], functions[i]) == 0)
         {
