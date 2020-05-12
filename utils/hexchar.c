@@ -1,4 +1,5 @@
-/* Takes a string and turns it into hexidecimal */
+/* Takes a string and turns it into hexidecimal 
+ * */
 char *hexflex(char word){
     char * outword = "";
     outword = (char *) malloc(33);

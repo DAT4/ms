@@ -1,4 +1,6 @@
-/* The converter function converts the opcodes into their binary representation */
+/* The converter function converts the opcodes into their binary 
+ * representation 
+ * */
 char *converter(char *code)
 {
     if (strcmp(code, "ADD") == 0)

@@ -1,4 +1,6 @@
-/* The function hex turns a hexidecimal address into its binary representation*/
+/* The function hex turns a hexidecimal address into its binary 
+ * representation
+ * */
 char *hex(char* str) 
 { 
     long int i = 1; 

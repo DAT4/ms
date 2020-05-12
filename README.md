@@ -1,7 +1,2 @@
-# Projekt 2 - Maskinnær programmering
-# Todo
-+ Fjern puts
-+ Skriv rapport
-+ Kommenter kode
-# Problemer
-+ Newline i inputfil
+# Assembly compiler written in C
+You have to make a space after a label and after the address after the .ORIG

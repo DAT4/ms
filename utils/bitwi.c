@@ -1,4 +1,6 @@
-/* The function showbits converts an integer into its binary representation */
+/* The function showbits converts an integer into its binary
+ * representation 
+ * */
 char * showbits( unsigned int x, int size )
 {
 	char out[] = "";
@@ -12,15 +14,18 @@ char * showbits( unsigned int x, int size )
 	return output;
 }
 
-/* The function holger utilizes showbits to convert a string representation of a number into a binary representation */
+/* The function holger utilizes showbits to convert a string
+ * representation of a number into a binary representation 
+ * */
 char * holger(char str[], int size)
 {
 	int i;
 	char minus = '-';
 	int p = strlen(str);
-	char num[20];
+	char num[20] = {0};
 
-	/* If we are dealing with a negative number */
+	/* If we are dealing with a negative number 
+     * */
 	if (str[1] == minus)
 	{
 		for (i = 2; i < p; i++){
@@ -29,7 +34,8 @@ char * holger(char str[], int size)
 		int number = atoi(num);
 		return showbits(-number,size);
 	}
-	/* If we are dealing with a positive number */
+	/* If we are dealing with a positive number 
+     * */
 	else
 	{
 		for (i = 1; i < p; i++){
