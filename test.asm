@@ -1,0 +1,3 @@
+ADD R1, R2, #-15
+LOOP ADD R3, R6, R1 
+BRz R1, LOOP

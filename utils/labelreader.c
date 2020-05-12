@@ -27,7 +27,7 @@ char *labelreader(char *label)
             return binary;
         }
     }
-    return "null";
+    return NULL;
 }
 
 /* The lbl2addr function will behave in much the same way as labelreader() but instead of returning
@@ -55,5 +55,5 @@ char *lbl2addr(char *label)
             return array[1];
         }
     }
-    return "null";
+    return NULL;
 }

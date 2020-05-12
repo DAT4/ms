@@ -87,7 +87,7 @@ char *converter(char *code)
     }
     else
     {
-        /* code */
+        return NULL;
     }
 
     return code;

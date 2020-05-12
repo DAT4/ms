@@ -1,8 +1,7 @@
 char *labelfinder(char str[], int line)
 {
     /* The function labelfinder first deconstructs each string of input it receives
-    by splitting each element into tokens seperated by spaces " ".
-     */
+    by splitting each element into tokens seperated by spaces " ".*/
     char *p = strtok(str, " ");
     char *array[10];
     int i = 0;
@@ -40,7 +39,7 @@ char *labelfinder(char str[], int line)
     {
         if (strcmp(array[0], functions[i]) == 0)
         {
-            return "no lable";
+            return NULL;
         }
     }
     int j;

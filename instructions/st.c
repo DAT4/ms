@@ -36,5 +36,5 @@ the value of the source registry into the location of a label
         strcat(binary, ret);
 	    return binary;
     }
-    return "ok";
+    return NULL;
 }

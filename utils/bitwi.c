@@ -15,13 +15,10 @@ char * showbits( unsigned int x, int size )
 /* The function holger utilizes showbits to convert a string representation of a number into a binary representation */
 char * holger(char str[], int size)
 {
-	//Det her er mærkeligt!!!
-	char prt[] = "cant delete me";
-	char out[] = "";
-	char num[] = "";
 	int i;
 	char minus = '-';
 	int p = strlen(str);
+	char num[20];
 
 	/* If we are dealing with a negative number */
 	if (str[1] == minus)
@@ -42,5 +39,5 @@ char * holger(char str[], int size)
 		return showbits(number,size);
 	}
 	
-    return "fejl";
+    return NULL;
 }

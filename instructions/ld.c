@@ -36,5 +36,5 @@ char *ld(char *array[], int line)
         strcat(binary, ret);
 	    return binary;
     }
-    return "ok";
+    return NULL;
 }

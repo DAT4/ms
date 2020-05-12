@@ -5,8 +5,7 @@ char *router(char *array[], int line)
     	if (strcmp("ADD", array[0]) == 0)
     	{
     		char *res = add(array);
-            return res;
-    	}
+            return res; }
         else if (strcmp("NOT", array[0]) == 0)
     	{
     		char *res = not(array);
@@ -55,7 +54,7 @@ char *router(char *array[], int line)
         else if (strcmp(".END", array[0]) == 0)
     	{
     		appender("");
-            return "ok";
+            return NULL; 
     	}
     	else
     	{

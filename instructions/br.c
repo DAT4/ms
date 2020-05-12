@@ -10,10 +10,10 @@ char *br(char *array[], int line)
     strcat(binary, ret);
     /* Then the program checks to see if the argument following the BR opcode is a label */
     char *label = lbl2addr(array[1]);
-    if (strcmp(label, "null")==0)
     /* If the label addres finder function "lbl2addr" returns null, then the PCoffset is not coming from a label
     but instead an integer value which is then converted to binary and appended
      */
+    if (label == NULL)
     {
         ret = holger(array[1],5);
         strcat(binary, ret);
@@ -35,5 +35,5 @@ char *br(char *array[], int line)
         strcat(binary, ret);
 	    return binary;
     }
-    return "ok";
+    return NULL;
 }
